@@ -16,6 +16,16 @@ public class Main {
     public static void main(String[] args) {
          Class clazz = Tabela.class;
          System.out.println(clazz.getClass() + "\n" + clazz);
+         
+         Class<?> classe = Tabela.class;
+         Annotation[] annotations = classe.getAnnotations();
+         for (Annotation annotation : annotations) {
+             if (annotation instanceof Tabela) {
+                 Tabela tabelaAnnotation = (Tabela)annotation;
+                 String nomeDaTabela = tabelaAnnotation.nome();
+                 System.out.println("Nome da Tabela: " + nomeDaTabela);
+             }
+        }
               
     }   
 }

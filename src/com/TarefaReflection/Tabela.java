@@ -15,6 +15,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
+@Tabela(nome = "Interface Tabela")
 public @interface Tabela {
     String nome();
 }
